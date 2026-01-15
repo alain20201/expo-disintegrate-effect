@@ -15,10 +15,6 @@ import {
   withTiming,
 } from "react-native-reanimated";
 
-// ============================================
-// ANIMATION CONSTANTS
-// ============================================
-
 const ANIMATION_CONFIG = {
   DURATION_MS: 1000,
   TIME_SCALE: 22.0,
@@ -35,13 +31,6 @@ const ANIMATION_CONFIG = {
   DRIFT_X: 3.5,
   DRIFT_Y: 2.5,
 } as const;
-
-// ============================================
-// BALANCED SHADER (quality + performance)
-// - SEARCH_RAD = 6 (169 iterations - 14x faster than original 2401)
-// - Full visual effects with sin/cos
-// - Bounded canvas for fewer pixels
-// ============================================
 
 const DUST_SHADER = `
 uniform shader image;
@@ -67,8 +56,6 @@ uniform float fadeStart;
 uniform float driftX;
 uniform float driftY;
 
-// Larger search radius to prevent particle clipping
-// 25x25 = 625 iterations - needed for particles that spread far
 const int SEARCH_RAD = 4;
 
 float hash(float2 p) {
@@ -109,28 +96,28 @@ half4 main(float2 fragCoord) {
       
       float startEase = min(lifeRatio * 10.0, 1.0);
       
-      // Wind
+    
       float windX = -windSpeed * t * (0.7 + rnd1 * 0.6);
       float verticalDir = rnd2 * 2.0 - 1.0;
       float windY = verticalDir * verticalSpread * t * (0.5 + rnd3 * 0.5);
       
-      // Turbulence (single sin/cos pair)
+    
       float turbPhase = t * 0.07 + rnd3 * 20.0;
       float turbX = sin(turbPhase) * turbulence * rnd1;
       float turbY = cos(turbPhase) * turbulence * rnd2;
       
-      // Burst
+    
       float burstAngle = rnd3 * 6.283;
       float burstDecay = 1.0 / (1.0 + lifeRatio * 5.0);
       float burstX = cos(burstAngle) * burstStrength * burstDecay;
       float burstY = sin(burstAngle) * burstStrength * burstDecay;
       
-      // Float motion
+    
       float floatPhase = t * 0.05 + rnd1 * 10.0;
       float floatX = sin(floatPhase) * floatAmp * 0.5;
       float floatY = cos(floatPhase * 0.7) * floatAmp;
       
-      // Drift
+    
       float driftDirX = (rnd1 - 0.5) * 2.0;
       float driftDirY = (rnd2 - 0.5) * 2.0;
       float tSq = t * t * 0.01;
@@ -169,10 +156,6 @@ half4 main(float2 fragCoord) {
 }
 `;
 
-// ============================================
-// COMPONENT
-// ============================================
-
 interface DustSnapGLProps {
   imageUri: string;
   imageLayout: {
@@ -200,7 +183,7 @@ export const DustSnapGL: React.FC<DustSnapGLProps> = ({
   const [isAnimating, setIsAnimating] = useState(false);
 
   const animationTime = useSharedValue(0);
-  // Use shared values instead of refs to avoid Reanimated warnings
+
   const seedValue = useSharedValue(Math.random() * 1000);
   const layoutWidth = useSharedValue(imageLayout.width);
   const layoutHeight = useSharedValue(imageLayout.height);
@@ -283,7 +266,6 @@ export const DustSnapGL: React.FC<DustSnapGLProps> = ({
     animationTime,
   ]);
 
-  // Full screen canvas - particles can flow anywhere
   const canvasBounds = useMemo(
     () => ({
       x: 0,

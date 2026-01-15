@@ -6,11 +6,11 @@ import {
   ViewStyle,
 } from "react-native";
 import Animated, {
-  runOnJS,
   useAnimatedStyle,
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
+import { scheduleOnRN } from "react-native-worklets";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
@@ -53,12 +53,12 @@ export const PressableScale = ({
       onPressIn={(e: GestureResponderEvent) => {
         "worklet";
         scale.value = withSpring(0.98, defaultSpringPress);
-        if (onPressIn) runOnJS(onPressIn)(e);
+        if (onPressIn) scheduleOnRN(onPressIn, e);
       }}
       onPressOut={(e: GestureResponderEvent) => {
         "worklet";
         scale.value = withSpring(1, defaultSpringRelease);
-        if (onPressOut) runOnJS(onPressOut)(e);
+        if (onPressOut) scheduleOnRN(onPressOut, e);
       }}
       style={[style, animatedStyle]}
       {...rest}

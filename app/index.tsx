@@ -3,6 +3,7 @@ import * as Haptics from "expo-haptics";
 import { Image } from "expo-image";
 import * as ImagePicker from "expo-image-picker";
 
+import { DustSnapGL } from "@/components/dust-snap-gl";
 import { PressableScale } from "@/components/pressable-scale";
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
@@ -14,7 +15,6 @@ import Animated, {
 } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { scheduleOnRN } from "react-native-worklets";
-import { DustSnapGL } from "../components/DustSnapGL";
 
 const mass = 1;
 const damping = 25;
@@ -139,17 +139,6 @@ export default function DustSnapApp() {
 
   return (
     <View style={[styles.safeArea, themedStyles.safeArea]}>
-      {/* <View
-        style={{
-          position: "absolute",
-          top: 0,
-          left: "50%",
-          right: 0,
-          bottom: 0,
-          borderLeftWidth: 1,
-          borderLeftColor: "red",
-        }}
-      /> */}
       <Animated.View
         style={styles.container}
         layout={LinearTransition.springify()
